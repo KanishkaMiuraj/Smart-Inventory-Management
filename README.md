@@ -45,18 +45,20 @@ Step 3.1: Navigate to the Backend
 - **Open your terminal (Command Prompt or PowerShell) and navigate into the backend folder:**
 
 
-``` cd backend ```
+``` 
+cd backend
+```
 
 
 Step 3.2: Configure the Database Connection
-- **Open the file appsettings.json located inside the backend folder.**
 
+- **Open the file appsettings.json located inside the backend folder.**
 - **Locate the "ConnectionStrings" section.**
+
 
 ## CRITICAL: You must update the Server= value to match your local SQL Server name.
 
 - **If you are using SQL Express, it is usually .\SQLEXPRESS or (localdb)\MSSQLLocalDB.**
-
 - **If you are using a full instance, it might be localhost or . (dot).**
 
 Example appsettings.json:
@@ -74,20 +76,28 @@ Step 3.3: Create the Database (Migrations)
 
 # Install Entity Framework Tool (Run only if not installed)
 
-```dotnet tool install --global dotnet-ef```
+```
+dotnet tool install --global dotnet-ef
+```
 
 # Apply Migrations to create the database
 
-```dotnet ef database update```
+```
+dotnet ef database update
+```
 
 Step 3.4: Run the Backend Server
 - **Now, start the API server:**
 
 
 
-```dotnet restore```
+```
+dotnet restore
+```
 
-```dotnet run```
+```
+dotnet run
+```
 
 
 ✅ Success: You should see output indicating the server is listening, typically at: http://localhost:5000 or https://localhost:7001
@@ -105,19 +115,25 @@ Step 4.2: Navigate to the Frontend
 Navigate into the frontend folder:
 
 
-```cd frontend```
+```
+cd frontend
+```
 
 Step 4.3: Install Dependencies
 This downloads all necessary React libraries (node_modules). This may take a minute.
 
 Bash
 
-```npm install```
+```
+npm install
+```
 
 Step 4.4: Start the Application
 Run the project:
 
-```npm start```
+```
+npm start
+```
 
 ✅ Success: Your default web browser should automatically open the application at: http://localhost:3000
 
