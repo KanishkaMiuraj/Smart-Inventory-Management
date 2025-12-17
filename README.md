@@ -45,7 +45,7 @@ Step 3.1: Navigate to the Backend
 - **Open your terminal (Command Prompt or PowerShell) and navigate into the backend folder:**
 
 
-```cd backend```
+``` cd backend ```
 
 
 Step 3.2: Configure the Database Connection
