@@ -29,15 +29,14 @@ Smart-Inventory-Management/  (Root Folder)
 ```
 
 ## ⚙️ 2. Prerequisites
+
 To run this project on a new system, ensure the following software is installed:
 
-Node.js (v16 or higher) - Required for Frontend
+- **Node.js** (v16 or higher) – Required for frontend
+- **.NET 8 SDK** – Required for backend
+- **SQL Server** (Express or Developer Edition) – Database
+- **Git** – Repository cloning
 
-.NET 8 SDK - Required for Backend
-
-SQL Server (Express or Developer Edition) - Required for Database
-
-Git - To clone the repository
 
 ## 🛠️ 3. Backend Setup Guide (Server & Database)
 The Backend must be started first so the Frontend has an API to talk to.
