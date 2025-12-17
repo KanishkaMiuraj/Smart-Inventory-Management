@@ -177,4 +177,4 @@ npm start
 
 ## Port Conflicts?
 
-If port 3000 or 5000 is busy, the terminal will ask to use another port. Type Y (Yes).
+- **If port 3000 or 5000 is busy, the terminal will ask to use another port. Type Y (Yes).**
