@@ -42,6 +42,12 @@
 *.idb
 *.pdb
 
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.user
+
 # Kernel Module Compile Results
 *.mod*
 *.cmd
