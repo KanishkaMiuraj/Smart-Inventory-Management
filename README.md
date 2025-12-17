@@ -26,6 +26,8 @@ Smart-Inventory-Management/  (Root Folder)
     ├── public/
     ├── src/
     └── package.json
+```
+
 ⚙️ 2. Prerequisites
 To run this project on a new system, ensure the following software is installed:
 
@@ -43,9 +45,10 @@ The Backend must be started first so the Frontend has an API to talk to.
 Step 3.1: Navigate to the Backend
 Open your terminal (Command Prompt or PowerShell) and navigate into the backend folder:
 
-Bash
 
-cd backend
+```cd backend```
+
+
 Step 3.2: Configure the Database Connection
 Open the file appsettings.json located inside the backend folder.
 
@@ -59,31 +62,33 @@ If you are using a full instance, it might be localhost or . (dot).
 
 Example appsettings.json:
 
-JSON
+```
 
 "ConnectionStrings": {
   "DefaultConnection": "Server=.\\SQLEXPRESS;Database=InventoryDB;Trusted_Connection=True;TrustServerCertificate=True;"
 }
+```
 Step 3.3: Create the Database (Migrations)
 Run the following commands in your terminal (while inside the backend folder) to automatically create the InventoryDB database and tables:
 
-Bash
+
 
 # Install Entity Framework Tool (Run only if not installed)
-dotnet tool install --global dotnet-ef
+```dotnet tool install --global dotnet-ef```
 
 # Apply Migrations to create the database
-dotnet ef database update
+```dotnet ef database update```
 Step 3.4: Run the Backend Server
 Now, start the API server:
 
 Bash
 
-dotnet restore
-dotnet run
+```dotnet restore```
+```dotnet run```
 ✅ Success: You should see output indicating the server is listening, typically at: http://localhost:5000 or https://localhost:7001
 
 Note: Keep this terminal window OPEN while testing the app.
+
 
 💻 4. Frontend Setup Guide (Client App)
 Now that the backend is running, let's start the React user interface.
@@ -94,21 +99,21 @@ Do not close the backend terminal. Open a NEW terminal window.
 Step 4.2: Navigate to the Frontend
 Navigate into the frontend folder:
 
-Bash
 
-cd frontend
+```cd frontend```
+
 Step 4.3: Install Dependencies
 This downloads all necessary React libraries (node_modules). This may take a minute.
 
 Bash
 
-npm install
+```npm install```
+
 Step 4.4: Start the Application
 Run the project:
 
-Bash
+```npm start```
 
-npm start
 ✅ Success: Your default web browser should automatically open the application at: http://localhost:3000
 
 🧪 5. How to Verify & Test
