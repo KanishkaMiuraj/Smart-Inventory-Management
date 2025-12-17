@@ -74,17 +74,22 @@ Run the following commands in your terminal (while inside the backend folder) to
 
 
 # Install Entity Framework Tool (Run only if not installed)
+
 ```dotnet tool install --global dotnet-ef```
 
 # Apply Migrations to create the database
+
 ```dotnet ef database update```
+
 Step 3.4: Run the Backend Server
 Now, start the API server:
 
 Bash
 
 ```dotnet restore```
+
 ```dotnet run```
+
 ✅ Success: You should see output indicating the server is listening, typically at: http://localhost:5000 or https://localhost:7001
 
 Note: Keep this terminal window OPEN while testing the app.
