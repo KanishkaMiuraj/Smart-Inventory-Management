@@ -39,25 +39,25 @@ To run this project on a new system, ensure the following software is installed:
 
 
 ## 🛠️ 3. Backend Setup Guide (Server & Database)
-The Backend must be started first so the Frontend has an API to talk to.
+- **The Backend must be started first so the Frontend has an API to talk to**
 
 Step 3.1: Navigate to the Backend
-Open your terminal (Command Prompt or PowerShell) and navigate into the backend folder:
+- **Open your terminal (Command Prompt or PowerShell) and navigate into the backend folder:**
 
 
 ```cd backend```
 
 
 Step 3.2: Configure the Database Connection
-Open the file appsettings.json located inside the backend folder.
+- **Open the file appsettings.json located inside the backend folder.**
 
-Locate the "ConnectionStrings" section.
+- **Locate the "ConnectionStrings" section.**
 
-CRITICAL: You must update the Server= value to match your local SQL Server name.
+## CRITICAL: You must update the Server= value to match your local SQL Server name.
 
-If you are using SQL Express, it is usually .\SQLEXPRESS or (localdb)\MSSQLLocalDB.
+- **If you are using SQL Express, it is usually .\SQLEXPRESS or (localdb)\MSSQLLocalDB.**
 
-If you are using a full instance, it might be localhost or . (dot).
+- **If you are using a full instance, it might be localhost or . (dot).**
 
 Example appsettings.json:
 
@@ -68,7 +68,7 @@ Example appsettings.json:
 }
 ```
 Step 3.3: Create the Database (Migrations)
-Run the following commands in your terminal (while inside the backend folder) to automatically create the InventoryDB database and tables:
+- **Run the following commands in your terminal (while inside the backend folder) to automatically create the InventoryDB database and tables:**
 
 
 
@@ -81,17 +81,18 @@ Run the following commands in your terminal (while inside the backend folder) to
 ```dotnet ef database update```
 
 Step 3.4: Run the Backend Server
-Now, start the API server:
+- **Now, start the API server:**
 
-Bash
+
 
 ```dotnet restore```
 
 ```dotnet run```
 
+
 ✅ Success: You should see output indicating the server is listening, typically at: http://localhost:5000 or https://localhost:7001
 
-Note: Keep this terminal window OPEN while testing the app.
+- **Note:** Keep this terminal window OPEN while testing the app.
 
 
 ## 💻 4. Frontend Setup Guide (Client App)
