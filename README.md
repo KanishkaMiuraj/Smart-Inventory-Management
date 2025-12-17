@@ -28,7 +28,7 @@ Smart-Inventory-Management/  (Root Folder)
     └── package.json
 ```
 
-⚙️ 2. Prerequisites
+## ⚙️ 2. Prerequisites
 To run this project on a new system, ensure the following software is installed:
 
 Node.js (v16 or higher) - Required for Frontend
@@ -39,7 +39,7 @@ SQL Server (Express or Developer Edition) - Required for Database
 
 Git - To clone the repository
 
-🛠️ 3. Backend Setup Guide (Server & Database)
+## 🛠️ 3. Backend Setup Guide (Server & Database)
 The Backend must be started first so the Frontend has an API to talk to.
 
 Step 3.1: Navigate to the Backend
@@ -90,7 +90,7 @@ Bash
 Note: Keep this terminal window OPEN while testing the app.
 
 
-💻 4. Frontend Setup Guide (Client App)
+## 💻 4. Frontend Setup Guide (Client App)
 Now that the backend is running, let's start the React user interface.
 
 Step 4.1: Open a New Terminal
@@ -116,7 +116,7 @@ Run the project:
 
 ✅ Success: Your default web browser should automatically open the application at: http://localhost:3000
 
-🧪 5. How to Verify & Test
+## 🧪 5. How to Verify & Test
 Once both terminals are running, you can test the full system:
 
 Check Admin Dashboard:
@@ -139,7 +139,7 @@ Try to add more items to the cart than the available stock.
 
 The system will prevent this action (The + button will be disabled).
 
-🆘 Troubleshooting
+## 🆘 Troubleshooting
 Database Connection Error?
 
 Double-check your Server= name in appsettings.json.
