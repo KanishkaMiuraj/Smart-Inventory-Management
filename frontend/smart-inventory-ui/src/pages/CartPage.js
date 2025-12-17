@@ -235,7 +235,7 @@ const CartPage = () => {
                             fullWidth 
                             value={customerName}
                             onChange={(e) => setCustomerName(e.target.value)}
-                            placeholder="Ex: Kanishka Mirage"
+                            placeholder="Enter Your Name"
                             sx={{ mb: 3 }}
                             size="small"
                         />
