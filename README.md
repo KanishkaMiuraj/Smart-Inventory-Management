@@ -70,6 +70,7 @@ Example appsettings.json:
 }
 ```
 Step 3.3: Create the Database (Migrations)
+
 - **Run the following commands in your terminal (while inside the backend folder) to automatically create the InventoryDB database and tables:**
 
 
@@ -87,6 +88,7 @@ dotnet ef database update
 ```
 
 Step 3.4: Run the Backend Server
+
 - **Now, start the API server:**
 
 
@@ -106,13 +108,17 @@ dotnet run
 
 
 ## 💻 4. Frontend Setup Guide (Client App)
-Now that the backend is running, let's start the React user interface.
+
+- **Now that the backend is running, let's start the React user interface.**
+
 
 Step 4.1: Open a New Terminal
-Do not close the backend terminal. Open a NEW terminal window.
+
+- **Do not close the backend terminal. Open a NEW terminal window.**
 
 Step 4.2: Navigate to the Frontend
-Navigate into the frontend folder:
+
+- **Navigate into the frontend folder:**
 
 
 ```
@@ -120,16 +126,18 @@ cd frontend
 ```
 
 Step 4.3: Install Dependencies
-This downloads all necessary React libraries (node_modules). This may take a minute.
 
-Bash
+- **This downloads all necessary React libraries (node_modules). This may take a minute.**
+
+
 
 ```
 npm install
 ```
 
 Step 4.4: Start the Application
-Run the project:
+
+- **Run the project:**
 
 ```
 npm start
@@ -138,34 +146,34 @@ npm start
 ✅ Success: Your default web browser should automatically open the application at: http://localhost:3000
 
 ## 🧪 5. How to Verify & Test
-Once both terminals are running, you can test the full system:
+- **Once both terminals are running, you can test the full system:**
 
-Check Admin Dashboard:
+- **Check Admin Dashboard:**
 
-Go to http://localhost:3000/admin (or click "Admin Dashboard" in the nav).
+- **Go to http://localhost:3000/admin (or click "Admin Dashboard" in the nav).**
 
-Verify that products load from the database.
+- **Verify that products load from the database.**
 
-Test Low Stock Logic:
+- **Test Low Stock Logic:**
 
-In the Dashboard, add a product with Quantity: 5.
+- **In the Dashboard, add a product with Quantity: 5.**
 
-The "Low Stock Alert" card should immediately turn Red and pulse.
+- **The "Low Stock Alert" card should immediately turn Red and pulse.**
 
-Test Order Validation:
+## Test Order Validation:
 
-Go to the Shop.
+- **Go to the Shop.**
 
-Try to add more items to the cart than the available stock.
+- **Try to add more items to the cart than the available stock.**
 
-The system will prevent this action (The + button will be disabled).
+- **The system will prevent this action (The + button will be disabled).**
 
 ## 🆘 Troubleshooting
-Database Connection Error?
+- **Database Connection Error?**
 
-Double-check your Server= name in appsettings.json.
+- **Double-check your Server= name in appsettings.json.**
 
-Ensure SQL Server Service is running in Windows Services.
+- **Ensure SQL Server Service is running in Windows Services.**
 
 Port Conflicts?
 
