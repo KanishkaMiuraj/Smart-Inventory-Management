@@ -1,73 +1,42 @@
-📦 Smart Inventory Management System
-A full-stack inventory management solution built with React.js (Frontend) and .NET 8 Web API (Backend), featuring real-time stock alerts, order management, and SQL Server integration.
+# 📦 Smart Inventory Management System
 
-🚀 Prerequisites
-Ensure you have the following installed on your system:
+![React](https://img.shields.io/badge/Frontend-React-61DAFB?logo=react&logoColor=black)
+![.NET](https://img.shields.io/badge/Backend-.NET%208-512BD4?logo=dotnet&logoColor=white)
+![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-CC2927?logo=microsoft-sql-server&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
-Node.js (v16 or higher)
+> A full-stack, enterprise-grade inventory management solution designed to handle real-time stock tracking, order validation, and automated low-stock alerts. Built with a **Clean N-Tier Architecture**.
 
-.NET 8 SDK
+---
 
-SQL Server (Express or Developer)
+## ✨ Key Features
 
-🛠️ Setup Instructions
-1️⃣ Database Setup
-Open SQL Server Management Studio (SSMS).
+* **📊 Smart Admin Dashboard:** Real-time overview of total products, orders, and revenue.
+* **🚨 Automated Low Stock Alerts:** System automatically identifies items below the threshold (configured in Backend) and triggers UI animations.
+* **🛒 Intelligent Cart System:** Prevents users from adding more items than available in stock (Backend validated).
+* **⚡ Real-time Filtering:** Instant search by Product Name or SKU without reloading.
+* **🔒 Secure Logic:** All business logic (Pricing, Validation, Stock Limits) is handled securely by the .NET Backend, not the Frontend.
 
-Create a new database named InventoryDB.
+---
 
-Go to the backend folder and open appsettings.json.
+## ⚙️ Prerequisites
 
-Update the ConnectionStrings section with your local Server Name:
+Before you begin, ensure you have the following installed on your system:
 
-JSON
+* **[Node.js](https://nodejs.org/)** (v16 or higher)
+* **[.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)**
+* **[SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)** (Express or Developer Edition)
+* **Git**
 
-"DefaultConnection": "Server=YOUR_SERVER_NAME;Database=InventoryDB;Trusted_Connection=True;TrustServerCertificate=True;"
-Open a terminal in the backend folder and run migrations to create tables:
+---
 
-Bash
+## 🚀 Step-by-Step Installation Guide
 
-dotnet ef database update
-2️⃣ Backend Setup (.NET API)
-Navigate to the backend folder:
+Follow these steps to get the project running on your local machine.
 
-Bash
+### 1️⃣ Clone the Repository
+Open your terminal/command prompt and run:
 
-cd backend
-Restore dependencies and run the API:
-
-Bash
-
-dotnet restore
-dotnet run
-The API will start at http://localhost:5000 (or similar port shown in terminal).
-
-3️⃣ Frontend Setup (React)
-Open a new terminal and navigate to the frontend folder:
-
-Bash
-
-cd frontend
-Install dependencies:
-
-Bash
-
-npm install
-Start the application:
-
-Bash
-
-npm start
-The app will launch in your browser at http://localhost:3000.
-
-🔑 Login Credentials (If applicable)
-This is an open dashboard, no login required for this demo version.
-
-✨ Key Features
-Low Stock Alerts: Automatic visual alerts and animations when stock dips below limit.
-
-Order Validation: Backend prevents ordering more items than available in stock.
-
-Real-time Calculations: Backend-driven price and total logic.
-
-N-Tier Architecture: Clean separation of UI, Business Logic, and Data Access.
+```bash
+git clone [https://github.com/kanishka-mirage/Smart-Inventory-Management.git](https://github.com/kanishka-mirage/Smart-Inventory-Management.git)
+cd Smart-Inventory-Management
