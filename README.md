@@ -1,44 +1,146 @@
+Markdown
+
 # 📦 Smart Inventory Management System
 
-![React](https://img.shields.io/badge/Frontend-React_18-61DAFB?logo=react&logoColor=black)
-![.NET](https://img.shields.io/badge/Backend-.NET_8_Web_API-512BD4?logo=dotnet&logoColor=white)
-![SQL Server](https://img.shields.io/badge/Database-SQL_Server-CC2927?logo=microsoft-sql-server&logoColor=white)
-![Architecture](https://img.shields.io/badge/Architecture-N--Tier-success)
+> **Author:** Kanishka Miuraj  
+> **Stack:** React.js (Frontend) | .NET 8 Web API (Backend) | SQL Server (Database)
 
-> **A full-stack, enterprise-grade inventory management solution.**
-> This system features real-time stock tracking, backend-driven validation, and automated low-stock alerts using a clean N-Tier Architecture.
+A complete, enterprise-grade inventory management solution featuring real-time stock tracking, backend-driven validation, and automated low-stock alerts.
 
 ---
 
-## ✨ Key Features
+## 📂 1. Project Structure
 
-* **📊 Smart Admin Dashboard:** Real-time analytics of products, orders, and revenue with visual data representation.
-* **🚨 Automated Low Stock Alerts:** System automatically calculates low stock based on backend configuration and triggers UI animations (Red Pulse Alert).
-* **🛒 Intelligent Cart System:** Features "Preventative UX" that disables adding items beyond available stock, backed by strict server-side validation.
-* **⚡ Instant Filtering:** Optimized searching by Product Name or SKU without reloading.
-* **🔒 Secure Logic:** All business rules (Pricing, Stock Limits, Validation) are enforced by the .NET Backend to ensure data integrity.
+Before starting, please understand the folder structure of this repository. The project is divided into two main parts:
 
----
+```text
+Smart-Inventory-Management/  (Root Folder)
+│
+├── backend/                 # Contains the .NET 8 Web API & Database Logic
+│   ├── Controllers/
+│   ├── Models/
+│   ├── appsettings.json     # Database Configuration is here
+│   └── Program.cs
+│
+└── frontend/                # Contains the React.js Client Application
+    ├── public/
+    ├── src/
+    └── package.json
+⚙️ 2. Prerequisites
+To run this project on a new system, ensure the following software is installed:
 
-## ⚙️ Prerequisites
+Node.js (v16 or higher) - Required for Frontend
 
-To run this project successfully, ensure your system has the following installed:
+.NET 8 SDK - Required for Backend
 
-1.  **[Node.js](https://nodejs.org/)** (v16 or higher)
-2.  **[.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)**
-3.  **[SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)** (Express or Developer Edition)
-4.  **Git** (for cloning the repository)
+SQL Server (Express or Developer Edition) - Required for Database
 
----
+Git - To clone the repository
 
-## 🚀 Installation & Setup Guide
+🛠️ 3. Backend Setup Guide (Server & Database)
+The Backend must be started first so the Frontend has an API to talk to.
 
-Follow these steps to get the application running on your local machine.
+Step 3.1: Navigate to the Backend
+Open your terminal (Command Prompt or PowerShell) and navigate into the backend folder:
 
-### 1️⃣ Clone the Repository
+Bash
 
-Open your terminal or command prompt and run:
+cd backend
+Step 3.2: Configure the Database Connection
+Open the file appsettings.json located inside the backend folder.
 
-```bash
-git clone [https://github.com/kanishka-mirage/Smart-Inventory-Management.git](https://github.com/kanishka-miuraj/Smart-Inventory-Management.git)
-cd Smart-Inventory-Management
+Locate the "ConnectionStrings" section.
+
+CRITICAL: You must update the Server= value to match your local SQL Server name.
+
+If you are using SQL Express, it is usually .\SQLEXPRESS or (localdb)\MSSQLLocalDB.
+
+If you are using a full instance, it might be localhost or . (dot).
+
+Example appsettings.json:
+
+JSON
+
+"ConnectionStrings": {
+  "DefaultConnection": "Server=.\\SQLEXPRESS;Database=InventoryDB;Trusted_Connection=True;TrustServerCertificate=True;"
+}
+Step 3.3: Create the Database (Migrations)
+Run the following commands in your terminal (while inside the backend folder) to automatically create the InventoryDB database and tables:
+
+Bash
+
+# Install Entity Framework Tool (Run only if not installed)
+dotnet tool install --global dotnet-ef
+
+# Apply Migrations to create the database
+dotnet ef database update
+Step 3.4: Run the Backend Server
+Now, start the API server:
+
+Bash
+
+dotnet restore
+dotnet run
+✅ Success: You should see output indicating the server is listening, typically at: http://localhost:5000 or https://localhost:7001
+
+Note: Keep this terminal window OPEN while testing the app.
+
+💻 4. Frontend Setup Guide (Client App)
+Now that the backend is running, let's start the React user interface.
+
+Step 4.1: Open a New Terminal
+Do not close the backend terminal. Open a NEW terminal window.
+
+Step 4.2: Navigate to the Frontend
+Navigate into the frontend folder:
+
+Bash
+
+cd frontend
+Step 4.3: Install Dependencies
+This downloads all necessary React libraries (node_modules). This may take a minute.
+
+Bash
+
+npm install
+Step 4.4: Start the Application
+Run the project:
+
+Bash
+
+npm start
+✅ Success: Your default web browser should automatically open the application at: http://localhost:3000
+
+🧪 5. How to Verify & Test
+Once both terminals are running, you can test the full system:
+
+Check Admin Dashboard:
+
+Go to http://localhost:3000/admin (or click "Admin Dashboard" in the nav).
+
+Verify that products load from the database.
+
+Test Low Stock Logic:
+
+In the Dashboard, add a product with Quantity: 5.
+
+The "Low Stock Alert" card should immediately turn Red and pulse.
+
+Test Order Validation:
+
+Go to the Shop.
+
+Try to add more items to the cart than the available stock.
+
+The system will prevent this action (The + button will be disabled).
+
+🆘 Troubleshooting
+Database Connection Error?
+
+Double-check your Server= name in appsettings.json.
+
+Ensure SQL Server Service is running in Windows Services.
+
+Port Conflicts?
+
+If port 3000 or 5000 is busy, the terminal will ask to use another port. Type Y (Yes).
