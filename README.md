@@ -1,42 +1,44 @@
 # 📦 Smart Inventory Management System
 
-![React](https://img.shields.io/badge/Frontend-React-61DAFB?logo=react&logoColor=black)
-![.NET](https://img.shields.io/badge/Backend-.NET%208-512BD4?logo=dotnet&logoColor=white)
-![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-CC2927?logo=microsoft-sql-server&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+![React](https://img.shields.io/badge/Frontend-React_18-61DAFB?logo=react&logoColor=black)
+![.NET](https://img.shields.io/badge/Backend-.NET_8_Web_API-512BD4?logo=dotnet&logoColor=white)
+![SQL Server](https://img.shields.io/badge/Database-SQL_Server-CC2927?logo=microsoft-sql-server&logoColor=white)
+![Architecture](https://img.shields.io/badge/Architecture-N--Tier-success)
 
-> A full-stack, enterprise-grade inventory management solution designed to handle real-time stock tracking, order validation, and automated low-stock alerts. Built with a **Clean N-Tier Architecture**.
+> **A full-stack, enterprise-grade inventory management solution.**
+> This system features real-time stock tracking, backend-driven validation, and automated low-stock alerts using a clean N-Tier Architecture.
 
 ---
 
 ## ✨ Key Features
 
-* **📊 Smart Admin Dashboard:** Real-time overview of total products, orders, and revenue.
-* **🚨 Automated Low Stock Alerts:** System automatically identifies items below the threshold (configured in Backend) and triggers UI animations.
-* **🛒 Intelligent Cart System:** Prevents users from adding more items than available in stock (Backend validated).
-* **⚡ Real-time Filtering:** Instant search by Product Name or SKU without reloading.
-* **🔒 Secure Logic:** All business logic (Pricing, Validation, Stock Limits) is handled securely by the .NET Backend, not the Frontend.
+* **📊 Smart Admin Dashboard:** Real-time analytics of products, orders, and revenue with visual data representation.
+* **🚨 Automated Low Stock Alerts:** System automatically calculates low stock based on backend configuration and triggers UI animations (Red Pulse Alert).
+* **🛒 Intelligent Cart System:** Features "Preventative UX" that disables adding items beyond available stock, backed by strict server-side validation.
+* **⚡ Instant Filtering:** Optimized searching by Product Name or SKU without reloading.
+* **🔒 Secure Logic:** All business rules (Pricing, Stock Limits, Validation) are enforced by the .NET Backend to ensure data integrity.
 
 ---
 
 ## ⚙️ Prerequisites
 
-Before you begin, ensure you have the following installed on your system:
+To run this project successfully, ensure your system has the following installed:
 
-* **[Node.js](https://nodejs.org/)** (v16 or higher)
-* **[.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)**
-* **[SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)** (Express or Developer Edition)
-* **Git**
+1.  **[Node.js](https://nodejs.org/)** (v16 or higher)
+2.  **[.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)**
+3.  **[SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)** (Express or Developer Edition)
+4.  **Git** (for cloning the repository)
 
 ---
 
-## 🚀 Step-by-Step Installation Guide
+## 🚀 Installation & Setup Guide
 
-Follow these steps to get the project running on your local machine.
+Follow these steps to get the application running on your local machine.
 
 ### 1️⃣ Clone the Repository
-Open your terminal/command prompt and run:
+
+Open your terminal or command prompt and run:
 
 ```bash
-git clone [https://github.com/kanishka-mirage/Smart-Inventory-Management.git](https://github.com/kanishka-mirage/Smart-Inventory-Management.git)
+git clone [https://github.com/kanishka-mirage/Smart-Inventory-Management.git](https://github.com/kanishka-miuraj/Smart-Inventory-Management.git)
 cd Smart-Inventory-Management
