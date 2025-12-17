@@ -146,7 +146,8 @@ npm start
 ✅ Success: Your default web browser should automatically open the application at: http://localhost:3000
 
 ## 🧪 5. How to Verify & Test
-- **Once both terminals are running, you can test the full system:**
+
+Once both terminals are running, you can test the full system
 
 - **Check Admin Dashboard:**
 
